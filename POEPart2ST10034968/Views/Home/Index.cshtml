@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <br />
+    <div class="card-colourful-gradient">
+        <h1 class="display-4">Welcome @CurrentUser.u.Name</h1>
+    </div>
+    
+    <br />
+    @if (CurrentUser.u.IsEmployee == true)
+    {
+        <div class="row">
+            <br />
+            <form asp-controller="EmployeePages" asp-action="AddFarmer" method="get">
+                <button class="btn btn-lg btn-outline-primary">
+                    Add Farmer
+                </button>
+            </form>
+        </div>
+        <br/>
+        <div class="row">
+            <br />
+            <form asp-controller="EmployeePages" asp-action="SelectFarmer" method="get">
+                <button class="btn btn-lg btn-outline-success">
+                    View Products by a Farmer
+                </button>
+            </form>
+        </div>
+        <br/>
+    }
+    else
+    {
+        <div class="row">
+            <br />
+            <form asp-controller="FarmerPages" asp-action="AddProduct" method="get">
+                <button class="btn btn-lg btn-outline-primary">
+                    Add Product
+                </button>
+            </form>
+        </div>
+    }
+
+
+</div>

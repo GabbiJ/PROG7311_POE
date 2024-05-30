@@ -1,0 +1,65 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Farmer Products";
+}
+
+<h1> <strong> @Model.farmer.Name @Model.farmer.Surname</strong>'s Products</h1>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Product Type</th>
+            <th scope="col">Production Date</th>
+            <th scope="col">Farmer Username</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < Model.allProducts.Count; i++)
+        {
+            string rowClass = i % 3 == 0 ? "table-primary" : i % 3 == 1 ? "table-secondary" : "table-success";
+            <tr class="@rowClass">
+                <td>@Model.allProducts[i].Id</td>
+                <td>@Model.allProducts[i].Name</td>
+                <td>@Model.allProducts[i].ProdType</td>
+                <td>@Model.allProducts[i].ProductionDate.ToString("dd MMM yyyy")</td>
+                <td>@Model.allProducts[i].Farmer</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<body>
+    <div class="text-center">
+        <div class="card border-primary mb-3" >
+            <h3 class="card-header">Filter Products</h3>
+            <br />
+            <div class="card-body">
+                <form asp-action="ViewFarmerProductsByDate" asp-controller="EmployeePages" method="post">
+                    <h4 class="card-title">By Date</h4>
+                    <input type="date" name="dpStart" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Start Date"> <input type="date" name="dpEnd" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="End Date">
+                    <br />
+                    <button class="btn btn-lg btn-secondary type="submit" name="btnFilter">Filter by Date Range</button>
+                </form>
+                <form asp-action="ViewFarmerProductsByType" asp-controller="EmployeePages" method="post">
+                    <br />
+                    <br />
+                    <h4 class="card-title">By Product Type</h4>
+                    <select class="form-select" id="exampleSelect1" name="ddProdType">
+                        <option>Produce</option>
+                        <option>Tools</option>
+                        <option>Livestock</option>
+                        <option>Other</option>
+                    </select>
+                    <br />
+                    <button class="btn btn-lg btn-secondary type="submit" name="btnFilter">Filter by Product Type</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+

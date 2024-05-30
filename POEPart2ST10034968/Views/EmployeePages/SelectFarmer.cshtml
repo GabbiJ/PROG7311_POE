@@ -1,0 +1,23 @@
+﻿@model List<FUser>
+
+@{
+    ViewData["Title"] = "Select a Farmer";
+}
+<br />
+<div class="text-center">
+    <h1>Select a farmer below to view all their stored products</h1>
+</div>
+<br />
+<br />
+<br />
+<div class="d-grid gap-2">
+    @foreach (var f in Model)
+    {
+        <form asp-action="SelectFarmer" method="post">
+            <button class="btn btn-lg btn-primary" type="submit" name="btnFarmer" value="@f.Username">
+                @f.Name @f.Surname (@f.Username)
+            </button>
+        </form>
+    }
+
+</div>

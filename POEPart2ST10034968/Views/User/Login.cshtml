@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Log In";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - POEPart2ST10034968</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/LoginAndRegister.css" asp-append-version="true" />
+</head>
+
+<br/>
+<br/>
+<body>
+    <div class="card border-success mb-3">
+        <h1 class="card-header">Login</h1>
+        <div class="card-body">
+            <form asp-action="Login" method="post">
+                <fieldset>                   
+                    <div>
+                        <h2 for="exampleInputEmail1" class="form-label mt-4">Email address</>
+                            <input type="email" name="txtEmail" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div>
+                        <h2 for="exampleInputPassword1" class="form-label mt-4">Password</h2>
+                        <input type="password" name= "txtPass" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+                    </div>
+                    <div>
+                        <h2 for="exampleSelect1" class="form-label mt-4">Are you an Employee or Farmer</h2>
+                        <select class="form-select" id="exampleSelect1" name="ddUserType">
+                            <option>Employee</option>
+                            <option>Farmer</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-danger" name="txtError">@ViewBag.ErrorMessage</h4>
+                    </div>
+                    <br/>
+                    <br />
+                    <div>
+                        <a asp-area="" asp-controller="User" asp-action="Register">Click here if you don't have an account</a>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>       
+    </div>
+</body>
+

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Add Product";
+}
+
+<div class="text-center">
+    <br />
+    <h1 class="display-4">Add a Product</h1>
+    <br />
+    <form asp-action="AddProduct" method="post">
+        <h2>Name</h2>
+        <input type="text" name="txtName" class="form-control" id="floatingInput">
+        <br />
+
+        <h2>Product Type</h2>
+        <select class="form-select" id="exampleSelect1" name="ddProdType">
+            <option>Produce</option>
+            <option>Tools</option>
+            <option>Livestock</option>
+            <option>Other</option>
+        </select>
+        <br />
+
+        <h2>Production Date</h2>
+        <input type="date" name="dpProdDate" class="form-control" name="dpProdDate">
+        <br />
+        <br />
+        <div class="text-center">
+            <h4 class="text-danger" name="txtError">@ViewBag.ErrorMessage</h4>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+    </form>
+
+</div>
