@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER-PC\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\POEPart2ST10034968\\POEPart2ST10034968\\POEPart2ST10034968.csproj",
+      "projectUniqueName": "C:\\Users\\USER-PC\\OneDrive\\Documenti\\Uni Files\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\Part 2\\POEPart2ST10034968\\POEPart2ST10034968\\POEPart2ST10034968.csproj",
       "projectName": "POEPart2ST10034968",
-      "projectPath": "C:\\Users\\USER-PC\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\POEPart2ST10034968\\POEPart2ST10034968\\POEPart2ST10034968.csproj",
+      "projectPath": "C:\\Users\\USER-PC\\OneDrive\\Documenti\\Uni Files\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\Part 2\\POEPart2ST10034968\\POEPart2ST10034968\\POEPart2ST10034968.csproj",
       "packagesPath": "C:\\Users\\USER-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER-PC\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\POEPart2ST10034968\\POEPart2ST10034968\\obj\\",
+      "outputPath": "C:\\Users\\USER-PC\\OneDrive\\Documenti\\Uni Files\\Varsity College\\Year 3\\Semester 1\\PROG7311\\POE\\Part 2\\POEPart2ST10034968\\POEPart2ST10034968\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
