@@ -1,4 +1,4 @@
-﻿# PROG7311 POE Part 2
+ # PROG7311 POE Part 2
 
 The program **Agri-Energy Connect**  aims to be a web application that will be a platform in which farmers can upload their products that can be viewed by employees. 
 
@@ -63,6 +63,5 @@ Once the "Add Product" button on the home page is clicked the farmer will be tak
 1. Enter the details relating to the product they wish to add. 
 2. Click the submit to add the product to the database. 
 3. If the information entered is valid, the farmer will be taken back to the home page and the product will be added to the database.
-# Link to GitHub Repository
-[GitHub Repository]()
+
 
